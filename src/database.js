@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/roles', {
+mongoose.connect('mongodb://localhost/zhamatdb', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
