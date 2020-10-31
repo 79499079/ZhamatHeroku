@@ -137,6 +137,26 @@ input, select, textarea {
 		margin: 0 0 2.25em 0;
 	}
 
+	.blue{
+		color: #283e6b;
+		text-align: justify;
+	}
+
+	.red{
+		color: red;
+		text-align: justify;
+	}
+
+	.bluetw{
+		color: #106f94;
+		text-align: justify;
+	}
+
+	.green{
+		color: #068123;
+		text-align: justify;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: black;
 		font-weight: 700;
