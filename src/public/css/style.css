@@ -2780,45 +2780,7 @@ input, select, textarea {
 					color: #b7eadc;
 				}
 
-		#header > nav {
-			-moz-flex-grow: 1;
-			-webkit-flex-grow: 1;
-			-ms-flex-grow: 1;
-			flex-grow: 1;
-		}
-
-			#header > nav ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-
-				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
-					display: block;
-					padding: 0;
-				}
-
-					#header > nav ul li a {
-						-moz-transition: none;
-						-webkit-transition: none;
-						-ms-transition: none;
-						transition: none;
-						border: 0;
-						color: #ffffff !important;
-						display: block;
-						padding: 0.85em 0;
-						text-decoration: none;
-					}
-
-						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
-						}
-
-					#header > nav ul li:first-child {
-						border-top: 0;
-					}
+		
 
 /* Wrapper */
 
