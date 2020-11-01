@@ -43,7 +43,7 @@ indexCtrl.enviaEmail = async (req, res) => {
           return console.log(error);
       }
       console.log('mensaje enviado', info.messageId, info.response)
-      res.send('Envio Correcto')
+      res.render('emailok');
     });  
 }
 
