@@ -1,12 +1,14 @@
 const router = require("express").Router();
 
 const {
-  entraUsuario
+  iniciarSesion,
+  registrarse
 } = require("../controllers/users.controller");
 
 // Routes
-router.get("/users/signin", entraUsuario);
+router.get("/users/signin", iniciarSesion);
 
+router.get("/users/signup", registrarse);
 
 
 module.exports = router;
