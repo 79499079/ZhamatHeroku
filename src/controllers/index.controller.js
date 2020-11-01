@@ -25,7 +25,10 @@ indexCtrl.enviaEmail = async (req, res) => {
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS
-      }
+      },
+        tls:{
+          rejectUnauthorized: false
+        }
     })
     
     const mailOptions = {
@@ -40,7 +43,7 @@ indexCtrl.enviaEmail = async (req, res) => {
           return console.log(error);
       }
       console.log('mensaje enviado', info.messageId, info.response)
-      res.render('emailok');
+      res.send('Envio Correcto')
     });  
 }
 
