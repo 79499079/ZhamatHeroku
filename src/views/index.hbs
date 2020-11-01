@@ -282,14 +282,20 @@
         <p>Por favor colócanos tus inquietudes, estaremos pronto a resolverlos</p>
         <form action="enviarEmail" method="POST">
             <div class="row gtr-uniform">
-                <div class="col-6 col-12-xsmall"><input type="text" name="nombre" placeholder="Nombres/Apellidos*"
-                        required></div>
-                <div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Email*" required /></div>
-                <div class="col-12"><input type="text" name="whatsapp" placeholder="Whatsapp" />
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <input type="text" name="nombre" placeholder="Nombres/Apellidos*" required>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <input type="email" name="email" placeholder="Email*" required />
+                </div>
+                <div class="col-12">
+                    <input type="text" name="whatsapp" placeholder="Whatsapp" />
                     <small style="font-size: smaller;">Si desea que lo contactemos via Whatsapp déjenos su
                         número</small>
                 </div>
-                <div class="col-12"><textarea name="mensaje" placeholder="Mensaje*" rows="6" required></textarea></div>
+                <div class="col-12">
+                    <textarea name="mensaje" placeholder="Mensaje*" rows="6" required></textarea>
+                </div>
                 <div class="col-12">
                     <ul class="actions">
                         <li><input type="submit" class="primary" value="Enviar Mensaje" /></li>
