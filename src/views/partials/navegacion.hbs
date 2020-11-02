@@ -7,9 +7,13 @@
     <img src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1598710247/imgsonivision/logoZhamat_m02ppx.png" width="30" height="30" alt="">
     </a>
     <a class="navbar-brand" href="/">Zhamat Sistemas</a>
+   
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/users/logout">
+          <i class="icon solid fa-home">   Inicio</i>
+        </a>
+
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/#two">Paquete</a>
@@ -21,6 +25,19 @@
         <a class="nav-link" href="/#four">Contacto</a>
       </li>
     </ul>
+     {{#if user}}
+     <ul class="navbar-nav ml-auto">
+       <li class="nav-item">
+          <a class="nav-link" href="/">
+            <i class="icon solid fa-cart-arrow-down">   Carrito</i>
+          </a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="/users/logout">
+          <i class="icon solid fa-sign-out-alt">   Salir</a></i>
+        </li> 
+      </ul>    
+    {{else}}
      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="/users/signin">Iniciar Sesión</a>
@@ -29,5 +46,6 @@
           <a class="nav-link" href="/users/signup">Registrarse</a>
         </li>
       </ul>    
+      {{/if}}
   </div>
 </nav> 
