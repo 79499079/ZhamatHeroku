@@ -30,6 +30,7 @@
             <li>Un software (Tienda Digital)</li>
             <li>Campaña de Posicionamiento en Google</li>
             <li>Campaña Redes Sociales y Voz a voz</li>
+            <li>Base de datos volcado a su Negocio</li>
             </p>
         </ul>
         <div class="features">
@@ -75,8 +76,17 @@
                 <div class="inner">
                     <h4>¿Y cuanto le va a Costar?</h4>
                     <p>Todo el Paquete tiene un valor de tan solo <strong>$100.000 COP (pesos Colombianos), </strong> que
-                        cancelara después de que su página aparezca en Internet. <strong><a
-                                href="#four">Contáctenos.</a></strong> para que un técnico lo visite</p>
+                        cancelara después de que su página aparezca en Internet. <strong> <a href="#four">Contáctenos.</a></strong> para que un técnico lo visite
+                    </p>
+                    {{#if user}}
+                    <a href="/ventas/ckeckout">
+                        <button class="btn btn-primary" title="Presione para Adquirir nuestro paquete">Adquirir el paquete</button>
+                    </a>
+                    {{else}}
+                    <a href="/ventas/sinInicio">
+                        <button class="btn btn-primary" title="Presione para Adquirir nuestro paquete">Adquirir el paquete</button>
+                    </a>
+                    {{/if}}
                 </div>
             </article>
         </div>
