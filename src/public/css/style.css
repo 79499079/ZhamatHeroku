@@ -19,10 +19,6 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-top: 80px;;
 }
 
-.card{
-	background: #f70707;
-}
-
 	.red{
 		color: red;
 		text-align: justify;

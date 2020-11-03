@@ -1,59 +1,95 @@
 <div class="espacio"></div>
 
-<div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-  <div class="card" style="background: rgb(226, 226, 250);">
-    <div class="card-header">
-      <img class="rounded-circle mx-auto d-block logo m-4"
-        src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1598373097/imgsonivision/avatar_dd39ej.jpg"
-        alt="Logo Zhamat">
+
+    <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+        <div class="card">          
+                <img class="rounded-circle mx-auto d-block logo m-4" src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1598373097/imgsonivision/avatar_dd39ej.jpg" alt="Logo Zhamat">
+                <div class="text-center">
+                    <h3>Formas de Pago</h3>
+                </div>                      
+            <div class="card-body text-center" style="background: rgb(248, 236, 123);">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosContra"
+                        value="vcontra">
+                    <label class="form-check-label" for="pagosContra">Pago ContraEntrega</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosEpayco"
+                        value="vepayco">
+                    <label class="form-check-label" for="pagosEpayco">Pago Epayco</label>
+                </div>
+            </div>
+        </div> <br><br>
     </div>
-    <div class="card-body">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Pagar Personalmente</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Pagar via Epayco</label>
-      </div>      
+
+    <div class="col-sm-12 col-md-8 col-lg-6 mx-auto" id="pagoEpayco" style="display: none;">
+        <div class="card">
+            <div class="card-body text-center" style="background: rgb(248, 248, 245);">               
+                <div>
+                    <a href="https://payco.link/688183">
+                         <h3>Pago Epayco</h3>
+                        <img class="img-fluid" src="/images/pagoEpayco.png" alt="Logo Zhamat">                
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
-{{!-- <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-  <h3 class="text-center"><strong>Datos de Envio</strong></h3>
-  <div class="card" id="pagotarjeta">
-    <div class="card-header text-center">
-      <p>Valor a Pagar: $100.000 COP</p>
+    <div id="pagoContra" style="display:none;">
+        <div class="container">
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+                <h3 class="text-center"><strong>Datos de Envio</strong></h3>
+                <div class="card">
+                    <div class="card-header" style="background: rgb(201, 201, 240);">
+                        <strong>
+                            <h4 class="text-center">Valor a Pagar: <input type="text" class="text-center"
+                                    value="$100.000 COP" disabled /></h4>
+                        </strong>
+                    </div>
+                    <div class="card-body" style="background: rgb(201, 201, 240);">
+                        <form action="/formasPago" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nombres y Apellidos"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="direccion"
+                                    placeholder="Direccion Destinatario" required></input>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="celular"
+                                    placeholder="Teléfono o Celular" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="whatsapp" placeholder="Whatsapp">
+                            </div>
+                            <button class="btn btn-success btn-block">
+                                Ir a Sistemas de Pago
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-      <form action="/formasPago" method="POST">
-        <div class="form-group">
-          <input type="textarea" class="form-control" name="email" value="" placeholder="Email" required />
-        </div>
-        <div class="form-group">
-          <textarea rows="1" type="textarea" class="form-control" name="name" placeholder="Nombres y Apellidos "
-            required /></textarea>
-        </div>
-        <div class="form-group">
-          <input type="textarea" class="form-control" name="direccion" placeholder="Direccion Destinatario"
-            required></input>
-        </div>
-        <div class="form-group">
-          <input type="number" class="form-control" name="identidad" placeholder="Documento de Identidad"
-            required></input>
-        </div>
-        <div class="form-group">
-          <input type="number" class="form-control" name="celular" placeholder="Teléfono o Celular" required>
-        </div>
-        <div class="form-group">
-          <input type="number" class="form-control" name="whatsapp" placeholder="Whatsapp">
-        </div>
-        <button class="btn btn-success btn-block">
-          Ir a Sistemas de Pago
-        </button>
-      </form>
-    </div>
-  </div>  
-</div> --}}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".pago").click(function (evento) {
+            var valor = $(this).val();
+            if (valor == 'vcontra') {
+                $("#pagoEpayco").css("display", "none");
+                $("#pagoContra").css("display", "block");
+            } else {
+                $("#pagoEpayco").css("display", "block");
+                $("#pagoContra").css("display", "none");
+            }
+        });
+    });
+</script>

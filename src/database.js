@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const {PEDIDOS_HOST} = process.env;
+const {ZHAMAT_HOST} = process.env;
 
 const MONGODB_URI = `mongodb+srv://${
-  PEDIDOS_HOST ? PEDIDOS_HOST : "localhost"
+  ZHAMAT_HOST ? ZHAMAT_HOST : "localhost"
 }`;
 
 mongoose.connect(MONGODB_URI, {
