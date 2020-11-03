@@ -11,4 +11,8 @@ ventasCtrl.sinInicio = function (req, res) {
 ventasCtrl.confirmacion = (req, res) =>{
     res.render("ventas/confirmacion")
 }
+
+ventasCtrl.respuesta = (req, res) =>{
+    res.render("ventas/respuesta")
+}
 module.exports = ventasCtrl;
