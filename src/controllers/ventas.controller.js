@@ -13,6 +13,6 @@ ventasCtrl.confirmacion = (req, res) =>{
 }
 
 ventasCtrl.respuesta = (req, res) =>{
-    res.render("ventas/respuesta")
+    res.render("ventas/respuesta/")
 }
 module.exports = ventasCtrl;

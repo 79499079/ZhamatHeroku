@@ -51,7 +51,7 @@
                                             <td class="bold">IP</td>
                                             <td id="ip"></td>
                                         </tr>  
-                                         <tr>
+                                        {{!--  <tr>
                                             <td class="bold">Nombre</td>
                                             <td id="nombre"></td>
                                         </tr>                                          
@@ -66,7 +66,7 @@
                                         <tr>
                                             <td class="bold">Celular</td>
                                             <td id="celular"></td>
-                                        </tr>
+                                        </tr> --}}
                                         <tr>
                                             <td class="bold">En prueba</td>
                                             <td id="estadopeticion"></td>
@@ -131,21 +131,17 @@
                                 console.log('transacción fallida');
                             }
 
-                            $('#fecha').html(response.data.x_transaction_date);
-                            $('#respuesta').html(response.data.x_response);
-                            $('#referencia').text(response.data.x_id_invoice);
-                            $('#motivo').text(response.data.x_response_reason_text);
-                            $('#recibo').text(response.data.x_transaction_id);
-                            $('#banco').text(response.data.x_bank_name);
-                            $('#autorizacion').text(response.data.x_approval_code);                            
-                            $('#total').text(response.data.x_amount + ' ' + response.data.x_currency_code);
-                            $('#descripcion').text(response.data.x_description);   
-                            $('#ip').text(response.data.x_customer_ip);      
-                            $('#nombre').text(response.data.x_customer_name);  
-                            $('#email').text(response.data.x_customer_email);
-                            $('#direccion').text(response.data.x_customer_address);
-                            $('#celular').text(response.data.x_customer_movil);
-                            $('#estadopeticion').text(response.data.x_test_request);                            
+                            $('#fecha').html(response.data.x_fecha_transaccion);-
+                            $('#respuesta').html(response.data.x_transaction_state);-
+                            $('#referencia').text(response.data.x_transaction_id);-
+                            $('#motivo').text(response.data.x_description); -
+                            $('#recibo').text(response.data.x_ref_payco);-
+                            $('#banco').text(response.data.x_bank_name);-
+                            $('#autorizacion').text(response.data.x_id_factura);                            
+                            $('#total').text(response.data.x_amount);-
+                            $('#descripcion').text(response.data.x_description);-   
+                            $('#ip').text(response.data.x_cardnumber);  -                                
+                            $('#estadopeticion').text(response.data.x_transaction_state);                            
                         } else {
                             alert("Error consultando la información");
                         }

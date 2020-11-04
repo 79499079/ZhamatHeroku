@@ -1,81 +1,88 @@
 <div class="espacio"></div>
 
 
-    <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-        <div class="card">          
-                <img class="rounded-circle mx-auto d-block logo m-4" src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1598373097/imgsonivision/avatar_dd39ej.jpg" alt="Logo Zhamat">
-                <div class="text-center">
-                    <h3>Formas de Pago</h3>
-                </div>                      
-            <div class="card-body text-center" style="background: rgb(248, 236, 123);">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosContra"
-                        value="vcontra">
-                    <label class="form-check-label" for="pagosContra">Pago ContraEntrega</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosEpayco"
-                        value="vepayco">
-                    <label class="form-check-label" for="pagosEpayco">Pago Epayco</label>
-                </div>
+<div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+    <div class="card">
+        <img class="rounded-circle mx-auto d-block logo m-4"
+            src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1598373097/imgsonivision/avatar_dd39ej.jpg"
+            alt="Logo Zhamat">
+        <div class="text-center">
+            <h3>Formas de Pago</h3>
+        </div>
+        <div class="card-body text-center" style="background: rgb(248, 236, 123);">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosContra"
+                    value="vcontra">
+                <label class="form-check-label" for="pagosContra">Pago ContraEntrega</label>
             </div>
-        </div> <br><br>
-    </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosEpayco"
+                    value="vepayco">
+                <label class="form-check-label" for="pagosEpayco">Pago Epayco</label>
+            </div>
+        </div>
+    </div> <br><br>
+</div>
 
-    <div class="col-sm-12 col-md-8 col-lg-6 mx-auto" id="pagoEpayco" style="display: none;">
-        <div class="card">
-            <div class="card-body text-center" style="background: rgb(248, 248, 245);">               
-                <div>
-                    <a href="https://payco.link/689022">
-                         <h3>Pago Epayco</h3>
-                        <img class="img-fluid" src="https://res.cloudinary.com/zhamat-sistemas/image/upload/v1604443943/Zhamat_Sistemas/pagoEpayco_wqsycw.png" alt="Logo Zhamat">                
-                    </a>
+<div class="col-sm-12 col-md-8 col-lg-6 mx-auto" id="pagoEpayco" style="display: none;">
+    <div class="card">
+        <div class="card-body text-center" style="background: rgb(248, 248, 245);">
+            <div>
+                <form>
+                    <script src="https://checkout.epayco.co/checkout.js" class="epayco-button"
+                        data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1" data-epayco-amount="100000"
+                        data-epayco-name="Vestido Mujer Primavera" data-epayco-description="Paquete PYME"
+                        data-epayco-currency="cop" data-epayco-country="co" data-epayco-test="true"
+                        data-epayco-external="false" data-epayco-response="https://zhamatsistemas.herokuapp.com/ventas/respuesta"
+                        data-epayco-confirmation="https://zhamatsistemas.herokuapp.com/ventas/confirmacion">
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="pagoContra" style="display:none;">
+    <div class="container">
+        <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+            <h3 class="text-center"><strong>Datos de Envio</strong></h3>
+            <div class="card">
+                <div class="card-header" style="background: rgb(201, 201, 240);">
+                    <strong>
+                        <h4 class="text-center">Valor a Pagar: <input type="text" class="text-center"
+                                value="$100.000 COP" disabled /></h4>
+                    </strong>
+                </div>
+                <div class="card-body" style="background: rgb(201, 201, 240);">
+                    <form action="/formasPago" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Nombres y Apellidos"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="direccion"
+                                placeholder="Direccion Destinatario" required></input>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="celular" placeholder="Teléfono o Celular"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="whatsapp" placeholder="Whatsapp">
+                        </div>
+                        <button class="btn btn-success btn-block">
+                            Ir a Sistemas de Pago
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div id="pagoContra" style="display:none;">
-        <div class="container">
-            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-                <h3 class="text-center"><strong>Datos de Envio</strong></h3>
-                <div class="card">
-                    <div class="card-header" style="background: rgb(201, 201, 240);">
-                        <strong>
-                            <h4 class="text-center">Valor a Pagar: <input type="text" class="text-center"
-                                    value="$100.000 COP" disabled /></h4>
-                        </strong>
-                    </div>
-                    <div class="card-body" style="background: rgb(201, 201, 240);">
-                        <form action="/formasPago" method="POST">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="Email" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Nombres y Apellidos"
-                                    required />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="direccion"
-                                    placeholder="Direccion Destinatario" required></input>
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" name="celular"
-                                    placeholder="Teléfono o Celular" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" name="whatsapp" placeholder="Whatsapp">
-                            </div>
-                            <button class="btn btn-success btn-block">
-                                Ir a Sistemas de Pago
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
