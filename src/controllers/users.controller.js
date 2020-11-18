@@ -14,14 +14,14 @@ usersCtrl.registrarse = (req, res) => {
   res.render('users/signup');  
 };
 
-usersCtrl.singup = async (req, res) => {
+usersCtrl.signup = async (req, res) => {
   let errors = [];
-  const { name, usuario, email, role, password, confirm_password } = req.body;
-  if (name.length < 4 ) {
-    errors.push({ text: "Por favor ingrese un nombre de mas de 4 caracteres." });
+  const { name, usuario, email, direccion, celular, whatsapp, password, confirm_password } = req.body;
+  if (name.length < 7 ) {
+    errors.push({ text: "Por favor ingrese nombres validos." });
   }  
-  if (usuario.length < 4 ) {
-    errors.push({ text: "Por favor ingrese un Usuario de más de 4 Caracteres" });
+  if (usuario.length < 3 ) {
+    errors.push({ text: "Por favor ingrese un Usuario de más de 3 Caracteres" });
   }
   if (email.length < 4 ) {
     errors.push({ text: "Por favor ingrese un Email valido" });
@@ -36,8 +36,7 @@ usersCtrl.singup = async (req, res) => {
     res.render("users/signup", {
       errors,
       name,
-      usuario,
-      role,
+      usuario,      
       email      
     });
   } else {
@@ -49,7 +48,7 @@ usersCtrl.singup = async (req, res) => {
     } 
     else {
       // Guardar Nuevo Usuario
-      const newUser = new User({ name, usuario, email, role, password });
+      const newUser = new User({ name, usuario, email, direccion, celular, whatsapp, password });
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
       req.flash("success_msg", "Ha sido registrado satisfactoriamente.");

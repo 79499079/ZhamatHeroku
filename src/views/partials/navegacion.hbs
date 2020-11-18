@@ -26,16 +26,24 @@
       </li>     
     </ul>
      {{#if user}}
-     <ul class="navbar-nav ml-auto">
-       <li class="nav-item">
-          <a class="nav-link" href="/">
-            <i class="icon solid fa-cart-arrow-down">   Carrito</i>
+     <ul class="navbar-nav ml-auto mr-5">       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa fa-user" aria-hidden="true">
+              usuario
+            </i>
           </a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="/users/logout">
-          <i class="icon solid fa-sign-out-alt">   Salir</a></i>
-        </li> 
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/adminSel">
+              <i class="fa fa-address-card"> Mi cuenta</i>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/users/logout">
+              <i class="fa fa-sign-out-alt"> Salir</i>
+            </a>
+          </div>
+        </li>
       </ul>    
     {{else}}
      <ul class="navbar-nav ml-auto">

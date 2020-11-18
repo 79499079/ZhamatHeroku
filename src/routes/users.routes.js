@@ -3,7 +3,7 @@ const router = require("express").Router();
 const {
   iniciarSesion,
   registrarse,
-  singup,
+  signup,
   signin,
   logout
 } = require("../controllers/users.controller");
@@ -15,7 +15,7 @@ router.post("/users/signin", signin);
 
 router.get("/users/signup", registrarse);
 
-router.post("/users/signup", singup)
+router.post("/users/signup", signup)
 
 router.get("/users/logout", logout);
 

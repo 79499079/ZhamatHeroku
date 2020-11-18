@@ -7,9 +7,14 @@ const UserSchema = new Schema({
   usuario: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  role: { type: String, default: "Admin"},
-  date: { type: Date, default: Date.now }
-});
+  role: { type: String, default: "User"},
+  direccion: { type: String, default: "Sin dirección"},
+  celular: { type: Number, default: "0000"},
+  whatsapp: { type: Number, default: "0000"}  
+}, {
+  timestamps: true
+}
+);
 
 UserSchema.methods.encryptPassword = async password => {
   const salt = await bcrypt.genSalt(10);

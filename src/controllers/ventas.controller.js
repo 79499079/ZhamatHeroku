@@ -15,4 +15,9 @@ ventasCtrl.confirmacion = (req, res) =>{
 ventasCtrl.respuesta = (req, res) =>{
     res.render("ventas/respuesta/")
 }
+
+ventasCtrl.comprasPago = (req,res) =>{
+    
+
+}
 module.exports = ventasCtrl;

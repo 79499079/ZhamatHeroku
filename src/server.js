@@ -52,6 +52,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.msg_carrito = req.flash('msg_carrito');
+  res.locals.user = req.user || null;
+  //permite que sesion este en todo el proyecto
+  res.locals.session = req.session; 
+  next();
+});
+
 // routes
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/users.routes'));
