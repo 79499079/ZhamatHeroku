@@ -11,13 +11,11 @@
         </div>
         <div class="card-body text-center" style="background: rgb(248, 236, 123);">
             <div class="form-check form-check-inline">
-                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosContra"
-                    value="vcontra">
+                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosContra" value="vcontra">
                 <label class="form-check-label" for="pagosContra">Pago ContraEntrega</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosEpayco"
-                    value="vepayco">
+                <input class="form-check-input pago" type="radio" name="inlineRadioOptions" id="pagosEpayco" value="vepayco">
                 <label class="form-check-label" for="pagosEpayco">Pago Epayco</label>
             </div>
         </div>
@@ -46,7 +44,7 @@
 <div id="pagoContra" style="display:none;">
     <div class="container">
         <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
-            <h3 class="text-center"><strong>Datos de Envio</strong></h3>
+            <h3 class="text-center"><strong>Datos de Envio</strong></h3>            
             <div class="card">
                 <div class="card-header" style="background: rgb(201, 201, 240);">
                     <strong>
@@ -55,7 +53,7 @@
                     </strong>
                 </div>
                 <div class="card-body" style="background: rgb(201, 201, 240);">
-                    <form action="/formasPago" method="POST">
+                    <form action="/ventas/pagoContraentrega" method="POST">
                         <div class="form-group">
                             <input type="text" class="form-control" name="email" placeholder="Email" required />
                         </div>
