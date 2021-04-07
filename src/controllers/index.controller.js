@@ -7,8 +7,22 @@ indexCtrl.indexPrincipal = (req, res) => {
 };
 
 indexCtrl.enviaEmail = async (req, res) => {
-  
+  /* Envia Twilio */
   const {nombre, email, whatsapp, mensaje} = req.body
+  const accountSid = process.env.ACCOUNT_SID;
+  const authToken = process.env.AUTH_TOKEN;
+  const client = require("twilio")(accountSid, authToken);
+  client.messages
+    .create({
+      to: process.env.MI_NUMERO_CELULAR,
+      from: process.env.ENVIA_NUMERO_CELULAR,
+      body: `Se ha solicitado Informacion de Zhamat Sistemas De: ${email}  - Whatsapp ${whatsapp} - Mensaje ${mensaje}`,
+    })
+    .then((message) => res.render('index'))
+    .catch((error) => console.log(error), res.render('index'));
+  
+  /**Envia Correo*/
+  /* const {nombre, email, whatsapp, mensaje} = req.body
   contentHTML = `
     <h3>Solicitud de Información para CréditoSonivision</h3>
     <ul><h4>
@@ -44,7 +58,7 @@ indexCtrl.enviaEmail = async (req, res) => {
       }
       console.log('mensaje enviado', info.messageId, info.response)
       res.render('emailok');
-    });  
+    });   */
 }
 
 module.exports = indexCtrl;
