@@ -18,7 +18,7 @@ indexCtrl.enviaEmail = async (req, res) => {
       from: process.env.ENVIA_NUMERO_CELULAR,
       body: `Se ha solicitado Informacion de Zhamat Sistemas De: ${nombre}, ${email}  - Whatsapp ${whatsapp} - Mensaje ${mensaje}`,
     })
-    .then((message) => res.render('index'))
+    .then((message) => (window.confirm("¡Su mensaje fue enviado con Éxito!")))
     .catch((error) => console.log(error), res.render('index'));
   
   /**Envia Correo*/
