@@ -7,7 +7,7 @@ indexCtrl.indexPrincipal = (req, res) => {
 };
 
 indexCtrl.enviaEmail = async (req, res) => {
-  /* Envia Twilio */
+  /* Envia Twilio */ 
   const {nombre, email, whatsapp, mensaje} = req.body
   const accountSid = process.env.ACCOUNT_SID;
   const authToken = process.env.AUTH_TOKEN;
@@ -16,7 +16,7 @@ indexCtrl.enviaEmail = async (req, res) => {
     .create({
       to: process.env.MI_NUMERO_CELULAR,
       from: process.env.ENVIA_NUMERO_CELULAR,
-      body: `Se ha solicitado Informacion de Zhamat Sistemas De: ${email}  - Whatsapp ${whatsapp} - Mensaje ${mensaje}`,
+      body: `Se ha solicitado Informacion de Zhamat Sistemas De: ${nombre}, ${email}  - Whatsapp ${whatsapp} - Mensaje ${mensaje}`,
     })
     .then((message) => res.render('index'))
     .catch((error) => console.log(error), res.render('index'));
